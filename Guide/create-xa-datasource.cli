@@ -1,0 +1,9 @@
+batch
+
+/subsystem=datasources/xa-data-source=OracleXADS:add(jndi-name=java:/OracleXADS, driver-name=oracle, xa-datasource-class=oracle.jdbc.xa.client.OracleXADataSource, user-name=atipik, password=atipik, enabled=false)
+
+/subsystem=datasources/xa-data-source=OracleXADS/xa-datasource-properties=URL:add(value="jdbc:oracle:thin:@localhost:1521:EE")
+
+/subsystem=datasources/xa-data-source=OracleXADS:enable()
+
+run-batch

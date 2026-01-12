@@ -1,0 +1,15 @@
+services:
+  wildfly:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: async-hotel-app
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+    environment:
+      DB_HOST: host.docker.internal
+      DB_PORT: "1521"
+      DB_SERVICE: "DBCOURS.UNEPH.HT"
+      DB_USER: "atipik"
+      DB_PASSWORD: "atipik"

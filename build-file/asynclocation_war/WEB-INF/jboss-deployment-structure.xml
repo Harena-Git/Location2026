@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <!-- Exclure les sous-systèmes qui causent des conflits -->
+        <exclude-subsystems>
+            <subsystem name="jaxrs"/>
+        </exclude-subsystems>
+        
+        <!-- Exclure certaines dépendances de WildFly pour éviter les conflits -->
+        <exclusions>
+            <module name="org.jboss.netty"/>
+        </exclusions>
+        
+        <!-- Dépendances requises -->
+        <dependencies>
+            <module name="javax.api"/>
+            <module name="javax.transaction.api"/>
+            <module name="com.oracle"/>
+        </dependencies>
+        
+        <!-- Permettre l'utilisation des JARs locaux -->
+        <local-last value="true"/>
+    </deployment>
+</jboss-deployment-structure>
