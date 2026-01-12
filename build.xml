@@ -1,7 +1,7 @@
 <project name="deploy-ejb-asynchotel" default="deploy" basedir="./build-file">
     <property environment="env"/>
 
-    <property name="deploy.dir" value="/home/tokiniaina_judicael/Bureau/all_install/wildfly-10.0.0.Final/standalone/deployments"/>
+    <property name="deploy.dir" value="D:\wildfly-10.1.0.Final\standalone\deployments\"/>
 
     <property name="asynchotel-warname" value="asynchotel.war"/>
     <property name="asynchotel-jarname" value="asynchotel-ejb.jar"/>
