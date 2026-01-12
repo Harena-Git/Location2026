@@ -1,0 +1,6 @@
+# Ignore node_modules for all subprojects (Vue.js, etc.)
+node_modules/
+**/node_modules/
+
+# Ignore build-file directory
+build-file/
